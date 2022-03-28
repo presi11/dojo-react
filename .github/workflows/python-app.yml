@@ -66,7 +66,7 @@ jobs:
             
               #Now we have got the access of EC2 and we will start the deploy .
               sudo docker pull sotalvaroo/oldwave-fastapi-backend
-              sudo docker run -d --name oldwave-fastapi-backend -p 80:80 sotalvaroo/oldwave-fastapi-backend
+              sudo docker run -d --name oldwave-fastapi -p 80:80 sotalvaroo/oldwave-fastapi-backend
             '
 
     # - name: Deploy to Heroku
