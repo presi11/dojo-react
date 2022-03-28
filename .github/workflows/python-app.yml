@@ -65,7 +65,8 @@ jobs:
             ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
             
               #Now we have got the access of EC2 and we will start the deploy .
-              mkdir dojo
+              docker pull sotalvaroo/oldwave-fastapi-backend
+              docker run -d --name oldwave-fastapi-backend -p 80:80 sotalvaroo/oldwave-fastapi-backend
             '
 
     # - name: Deploy to Heroku
