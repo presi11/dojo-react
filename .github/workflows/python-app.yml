@@ -61,11 +61,7 @@ jobs:
               USER_NAME : ubuntu
               
           run: |
-            echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-            ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
-            
-              #Now we have got the access of EC2 and we will start the deploy .
-              echo "me conecteeeeeeeeee"
+            echo "$PRIVATE_KEY"
 
     # - name: Deploy to Heroku
     #   uses: akhileshns/heroku-deploy@v3.12.12
